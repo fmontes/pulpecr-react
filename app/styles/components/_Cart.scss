@@ -1,0 +1,28 @@
+.cart-block {
+  background: white;
+  bottom: 0;
+  max-height: 51px;
+  position: fixed;
+  transition: max-height 300ms ease-out;
+  width: 100%;
+
+  &.open {
+    max-height: 800px;
+  }
+
+  th {
+    vertical-align: middle;
+  }
+
+  .table {
+    margin-bottom: 0;
+  }
+}
+
+.cart-total {
+  font-size: $font-size-h3;
+}
+
+.cart-toggle-button {
+  text-align: right;
+}

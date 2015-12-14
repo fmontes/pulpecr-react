@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import "variables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "components/ProductsList";
+@import "components/ProductItem";
+@import "components/Cart";
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Font Variables
+$roboto-slab: 'Roboto', serif;
+
+// Styles
+body {
+  font-family: $roboto-slab;
+  font-weight: normal;
+}
