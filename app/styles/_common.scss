@@ -1,0 +1,17 @@
+.alert {
+  text-align: center;
+  padding: 5px 10px;
+  border: solid 1px;
+
+  &.is-success {
+    color: darken($success, 20);
+    border-color: $success;
+    background-color: rgba($success, 0.2);
+  }
+
+  &.is-error {
+    color: darken($error, 20);
+    border-color: $error;
+    background-color: rgba($error, 0.2);
+  }
+}

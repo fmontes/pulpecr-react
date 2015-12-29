@@ -13,9 +13,9 @@ var ProductList = React.createClass({
       )
     });
     return (
-      <ul className="products-list" ref="productsLists">
+      <section className="products-list mdl-grid" ref="productsList">
         {products}
-      </ul>
+      </section>
     )
   }
 });

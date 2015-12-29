@@ -1,24 +1,30 @@
-var currency = require('../utils/currency');
+var _ = require('underscore');
+var utils = require('../utils/index');
 
 var CartItem = React.createClass({
+  updateCart: function(e) {
+    var data = e.currentTarget.dataset;
+    data.cartAction === 'add' ? $.publish('cart:add', this.props.item) : $.publish('cart:remove', this.props.item);
+  },
+
   render: function() {
     var item = this.props.item;
     return (
-      <tr key={item.id}>
-        <td width="120">
-          <div className="input-group">
-              <span className="input-group-btn">
-                <button className="btn btn-default" type="button" data-item-id={item.id} data-cart-action="remove" onClick={self.updateCart}>-</button>
-              </span>
-              <input type="text" className="form-control" value={item.q} readOnly ref="qty" />
-              <span className="input-group-btn">
-                <button className="btn btn-default" type="button" data-item-id={item.id} data-cart-action="add" onClick={self.updateCart}>+</button>
-              </span>
-          </div>
+      <tr key={item.id} className="cart-item">
+        <td className="cart-item__image"><img src={item.image} width="40" /></td>
+        <td className="cart-item__info">
+          <h5 className="cart-item__name">{item.displayName}</h5>
+          <p className="cart-item__price">{utils.formatCurrency((item.q * item.price), '₡')}</p>
         </td>
-        <td><img src={item.image} width="50" /></td>
-        <td>{item.displayName}</td>
-        <td>{currency.format((item.q * item.price), '₡')}</td>
+        <td className="cart-item__actions">
+          <button className="mdl-button cart-item__action-btn" data-cart-action="remove" onClick={this.updateCart}>
+            <i className="material-icons">{item.q === 1 ? 'delete' : 'remove'}</i>
+          </button>
+          <input type="text" className="cart-item__action-qty" value={item.q} readOnly ref="qty" />
+          <button className="mdl-button cart-item__action-btn" type="button" data-cart-action="add" onClick={this.updateCart}>
+            <i className="material-icons">add</i>
+          </button>
+        </td>
       </tr>
     );
   }

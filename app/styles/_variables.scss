@@ -1,3 +1,16 @@
-$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-$green: #a2c437;
-$orange: #f26821;
+$green: #9BBF3B;
+$orange: #F26721;
+$gray: #9b9b9b;
+$gray-dark: #4a4a4a;
+$gray-lighter: rgba(0,0,0,0.1);
+$gray-lightest: #fafafa;
+
+$color-primary: 155,191,59;
+$color-accent: 242,103,33;
+
+$error: #7E1320;
+$success: $green;
+
+$layout-header-bg-color: $gray-lightest;
+$layout-header-text-color: $gray-dark;
+$input-text-highlight-color: $green;
