@@ -1,0 +1,19 @@
+.home {
+  background-color: $gray-lightest;
+  padding-bottom: 50px; // space for the cart button and subtotal info
+}
+
+.main-header {
+  padding: 20px 0 4px;
+}
+
+.logo {
+  background: url("/images/logo.png") no-repeat 0 0 / cover;
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 82px;
+}

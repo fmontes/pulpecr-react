@@ -1,0 +1,20 @@
+.layout-animation-enter {
+  opacity: 0.01;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &.layout-animation-enter-active {
+    opacity: 1;
+    transition: opacity 300ms $animation-curve-default;
+  }
+}
+
+.layout-animation-leave {
+  opacity: 1;
+
+  &.layout-animation-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms $animation-curve-default;
+  }
+}
